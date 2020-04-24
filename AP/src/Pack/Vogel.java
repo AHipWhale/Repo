@@ -7,5 +7,7 @@ public class Vogel {
         soort = srt;
     }
 
-    public String Soort() {return soort;}
+    public String Soort() {
+        return soort;
+    }
 }

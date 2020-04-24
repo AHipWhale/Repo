@@ -9,6 +9,10 @@ public class Klant {
         leeftijd = lt;
     }
 
+    public void setNaam(String naam) {
+        this.naam = naam;
+    }
+
     public String getNaam() {
         return naam;
     }

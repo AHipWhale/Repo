@@ -7,6 +7,10 @@ public class Zaal {
         nummer = nr;
     }
 
+    public void setNummer(int nummer) {
+        this.nummer = nummer;
+    }
+
     public int getNummer() {
         return nummer;
     }

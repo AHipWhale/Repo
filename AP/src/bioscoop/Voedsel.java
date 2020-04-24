@@ -9,6 +9,14 @@ public class Voedsel implements Item {
         prijs = pr;
     }
 
+    public void setNaam(String naam) {
+        this.naam = naam;
+    }
+
+    public void setPrijs(double prijs) {
+        this.prijs = prijs;
+    }
+
     public String getNaam() {
         return naam;
     }

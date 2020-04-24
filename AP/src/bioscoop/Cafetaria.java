@@ -11,6 +11,14 @@ public class Cafetaria {
         Omzet = new ArrayList<>();
     }
 
+    public void setVoedsel(Voedsel vs) {
+        voedsel = vs;
+    }
+
+    public void setDrankje(Drankje drk) {
+        drankje = drk;
+    }
+
     public Voedsel getVoedsel() {
         return voedsel;
     }
@@ -23,6 +31,9 @@ public class Cafetaria {
         return Omzet;
     }
 
+    public void setOmzet(ArrayList<Double> omzet) {
+        this.Omzet = omzet;
+    }
     public void voegOmzet(double omz) {
         Omzet.add(omz);
     }
@@ -37,6 +48,6 @@ public class Cafetaria {
     //Bij het stukje van totaal() heb ik een born gebruikt. Namelijk: https://www.ict.social/java/oop/lists-in-java-course
 
     public String toString() {
-        return "Omzet: €"+totaal();
+        return "Omzet: "+totaal();
     }
 }

@@ -51,7 +51,7 @@ public class Bioscoop {
 
     @Override
     public String toString() {
-        String result = "";
+        String result = "\n";
         result += "Bioscoopnaam: " + naam + "\n";
 
         if (zalen.isEmpty() == false) {
@@ -61,10 +61,10 @@ public class Bioscoop {
             result += "Gebruikte zalen: Er zijn geen zalen gebruikt\n";
         }
         if (medewerkers.isEmpty() == false) {
-            result += "Medewerker: " + medewerkers + "\n";
+            result += "Medewerkers: " + medewerkers + "\n";
         }
         else {
-            result += "Medewerker: Er zijn geen medewerkers\n";
+            result += "Medewerkers: Er zijn geen medewerkers\n";
         }
         result += cafetaria.toString() + "\n";
 

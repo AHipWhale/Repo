@@ -9,6 +9,14 @@ public class Medewerker {
         rol = rl;
     }
 
+    public void setNaam(String naam) {
+        this.naam = naam;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
+
     public String getNaam() {
         return naam;
     }

@@ -7,3 +7,7 @@ Ik heb de code zo geschreven dat als je geen zaal nummers en/of medewerkers hebt
 Je terugkrijgt dat er bijvoorbeeld geen zalen zijn gebruikt en dat er geen medewerkers zijn. Hierdoor staat er niet "null".
 Dus uiteindelijk krijg je de totale omzet, een lijst met de namen van de medewerkers en hun rol, 
 een lijst met de zaalnummers die zijn gebruikt, de naam van de bioscoop en de naam en leeftijd van je klanten.
+
+ps:
+  Ik heb de main 'notMain' genoemt omdat het programma anders de verkeerde main ging runnen.
+  Ik heb één bron gebruikt en die heb ik in de code vermeld

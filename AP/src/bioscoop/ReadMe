@@ -1,0 +1,13 @@
+Er is niet echt een reden waarom ik de bioscoop heb gekozen. Het was het eerste waar ik op kwam.
+Binnen het domein ben ik meer de kant van de cafetaria op gegaan, omdat ik dacht dat je hier een makkelijke interface kon maken.
+Ook ben ik de film kant niet opgegaan want ik kon niet echt bedenken wat ik daarme zou moeten.
+
+Uiteindelijk zou ik de omzet, medewerkers, aantal gebruikte zalen en klanten willen hebben. Dit heb ik dan ook gedaan.
+Ik heb de code zo geschreven dat als je geen zaal nummers en/of medewerkers hebt ingevuld. 
+Je terugkrijgt dat er bijvoorbeeld geen zalen zijn gebruikt en dat er geen medewerkers zijn. Hierdoor staat er niet "null".
+Dus uiteindelijk krijg je de totale omzet, een lijst met de namen van de medewerkers en hun rol, 
+een lijst met de zaalnummers die zijn gebruikt, de naam van de bioscoop en de naam en leeftijd van je klanten.
+
+ps:
+  Ik heb de main 'notMain' genoemt omdat het programma anders de verkeerde main ging runnen.
+  Ik heb één bron gebruikt en die heb ik in de code vermeld

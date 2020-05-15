@@ -71,12 +71,12 @@ public class Main {
         r1_2b.run_2b();
         System.out.println();
 
-//      test run van 2a
+//      test 1 run van 2a
         r1_2a.currentNode(s0_2a);
         r1_2a.run_2a(f);
         System.out.println();
 
-//      test run van 2a
+//      test 2 run van 2a
         r1_2a.currentNode(s0_2a);
         r1_2a.run_2a(g);
         System.out.println();

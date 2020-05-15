@@ -1,10 +1,10 @@
-package FSM;
+package Formatieve_opdrachten.FSM_2b;
+
 import java.util.ArrayList;
 
 public class Run {
     private Node nieuwNode;
     private Node currentNode;
-    private String[] f;
     private ArrayList<String> list;
     private String nd;
 
@@ -16,25 +16,17 @@ public class Run {
         currentNode = n;
     }
 
-    public void run(String[] f) {
-        try {
-            run(f, list);
-        }
-
-        catch (NullPointerException s) {
-            System.out.println("Error: geen mogelijke overgang");
-        }
-    }
-
-    public void run(String[] f, ArrayList<String>list) {
+    public void run() {
         list.add(currentNode.getNaam());
-        for (String i : f) {
-            nieuwNode = currentNode.verwerkInput(i);
+        while (currentNode.getOvergangA() != null || currentNode.getOvergangB() != null) {
+            nieuwNode = currentNode.verwerkInput(currentNode);
             currentNode = nieuwNode;
             nd = nieuwNode.getNaam();
             list.add(nd);
         }
+        System.out.println(nd);
         System.out.println(list);
         list.clear();
     }
 }
+

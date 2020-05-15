@@ -1,4 +1,4 @@
-package FSM;
+package Formatieve_opdrachten.FSM_2a;
 
 public class Node {
     private String naam;

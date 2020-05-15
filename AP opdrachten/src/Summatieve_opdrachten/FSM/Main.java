@@ -4,41 +4,81 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Node_2b n0 = new Node_2b("n0");
-        Node_2b n1 = new Node_2b("n1");
-        Node_2b n2 = new Node_2b("n2");
-        Node_2b n3 = new Node_2b("n3");
-        Node_2b n4 = new Node_2b("n4");
-        Node_2b n5 = new Node_2b("n5");
-        Node_2b n6 = new Node_2b("n6");
-        Node_2b g1 = new Node_2b("1");
-        Node_2b g2 = new Node_2b("2");
-        Node_2b g3 = new Node_2b("3");
-        Node_2b g4 = new Node_2b("4");
-        Node_2b g5 = new Node_2b("5");
-        Node_2b g6 = new Node_2b("6");
+//      Nodes van 2b
+        Node n0_2b = new Node("n0");
+        Node n1_2b= new Node("n1");
+        Node n2_2b = new Node("n2");
+        Node n3_2b = new Node("n3");
+        Node n4_2b = new Node("n4");
+        Node n5_2b = new Node("n5");
+        Node n6_2b = new Node("n6");
+        Node g1_2b = new Node("1");
+        Node g2_2b = new Node("2");
+        Node g3_2b = new Node("3");
+        Node g4_2b = new Node("4");
+        Node g5_2b = new Node("5");
+        Node g6_2b = new Node("6");
 
-        Run_2b r1 = new Run_2b();
+//      Node van 2a
+        Node s0_2a = new Node("s0");
+        Node s1_2a = new Node("s1");
+        Node s2_2a = new Node("s2");
+        Node s3_2a = new Node("s3");
 
-        Map<Node_2b, Integer> d0 = new HashMap<Node_2b, Integer>();
-        d0.put(n2, 99);
-        d0.put(n1, 1);
-        n0.setOvergang(d0);
+//      Run van 2b
+        Run r1_2b = new Run();
 
-        Map<Node_2b, Integer> d1 = new HashMap<Node_2b, Integer>();
-        d1.put(g1, 50);
-        d1.put(g2, 50);
-        n1.setOvergang(d1);
+//      Run van 2a
+        Run r1_2a = new Run();
 
-        Map<Node_2b, Integer> d2 = new HashMap<Node_2b, Integer>();
-        d2.put(g3, 25);
-        d2.put(g4, 25);
-        d2.put(g5, 25);
-        d2.put(g6, 25);
-        n2.setOvergang(d2);
+//      de overgangen van 2b
+        Map<Node, Integer> d0 = new HashMap<Node, Integer>();
+        d0.put(n2_2b, 50);
+        d0.put(n1_2b, 50);
+        n0_2b.setOvergang_2b(d0);
 
+        Map<Node, Integer> d1 = new HashMap<Node, Integer>();
+        d1.put(g1_2b, 50);
+        d1.put(g2_2b, 50);
+        n1_2b.setOvergang_2b(d1);
 
-        r1.currentNode(n0);
-        r1.run();
+        Map<Node, Integer> d2 = new HashMap<Node, Integer>();
+        d2.put(g3_2b, 25);
+        d2.put(g4_2b, 25);
+        d2.put(g5_2b, 25);
+        d2.put(g6_2b, 25);
+        n2_2b.setOvergang_2b(d2);
+
+//      de overgangen van 2a
+        s0_2a.setOvergang_2a("A", s1_2a);
+        s0_2a.setOvergang_2a("B", s2_2a);
+        s0_2a.setOvergang_2a("C", s3_2a);
+
+        s1_2a.setOvergang_2a("A", s1_2a);
+        s1_2a.setOvergang_2a("B", s2_2a);
+
+        s2_2a.setOvergang_2a("B", s3_2a);
+
+        s3_2a.setOvergang_2a("A", s3_2a);
+        s3_2a.setOvergang_2a("B", s0_2a);
+
+//      lijst met strings voor volgorde
+        String[] f = {"B", "A", "A", "B"};
+        String[] g = {"B", "B", "B", "A"};
+
+//      test run van 2b
+        r1_2b.currentNode(n0_2b);
+        r1_2b.run_2b();
+        System.out.println();
+
+//      test run van 2a
+        r1_2a.currentNode(s0_2a);
+        r1_2a.run_2a(f);
+        System.out.println();
+
+//      test run van 2a
+        r1_2a.currentNode(s0_2a);
+        r1_2a.run_2a(g);
+        System.out.println();
     }
 }

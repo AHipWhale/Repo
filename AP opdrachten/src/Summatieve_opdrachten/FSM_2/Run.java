@@ -30,7 +30,11 @@ public class Run {
     public void run(String[] f, ArrayList<String>list) {
         list.add(currentNode.getNaam());
         for (String i : f) {
-            nieuwNode = currentNode.verwerkInput(i);
+            System.out.println(currentNode.getNaam());
+            if (currentNode.verwerkInput(i, currentNode).getNaam().equals("ERROR")) {
+                break;
+            }
+            nieuwNode = currentNode.verwerkInput(i, currentNode);
             currentNode = nieuwNode;
             nd = nieuwNode.getNaam();
             list.add(nd);

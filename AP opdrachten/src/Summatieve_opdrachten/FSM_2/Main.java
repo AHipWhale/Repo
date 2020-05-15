@@ -9,19 +9,20 @@ public class Main {
 
         Run r1 = new Run();
 
-        s0.setOvergangA(s2);
-        s0.setOvergangB(s1);
+        s0.setOvergang("A", s1);
+        s0.setOvergang("B", s2);
+        s0.setOvergang("C", s3);
 
-        s1.setOvergangA(s1);
-        s1.setOvergangB(s2);
+        s1.setOvergang("A", s1);
+        s1.setOvergang("B", s2);
 
-        s2.setOvergangB(s3);
+        s2.setOvergang("B", s3);
 
-        s3.setOvergangA(s3);
-        s3.setOvergangB(s0);
+        s3.setOvergang("A", s3);
+        s3.setOvergang("B", s0);
 
         String[] f = {"B", "A", "A", "B"};
-        String[] g = {"B", "A", "B", "A"};
+        String[] g = {"B", "B", "B", "A"};
 
         r1.currentNode(s0);
         r1.run(f);
